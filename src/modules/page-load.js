@@ -1,30 +1,28 @@
-import { container } from "webpack";
+function loadPage() {
+    const content = document.querySelector('.content');
 
-let classNames = [
-    'container', 
-        'nav', 
-            'nav-logo', 
-            'nav-links', 
-                'left-nav-links', 
-                    'menu', 
-                    'location', 
-                'right-nav-links', 
-                    'our-story', 
-        'page-content', 
-            'content-source'
-]
-
-classNames.forEach((item) => {
-    // create a div and assign classname
-    let div = document.createElement('div');
-    div.className = `'${item}'`;
-    // selectors
-    item = document.querySelector(`'.${item}'`);
-    console.log(item);
-})
-
-const pageLoad = () => {
-    console.log('hi');
+    const container = document.createElement('div');
+    container.className = 'container';
+    container.innerHTML = 
+    `
+    <div class="nav">
+        <div class="nav-logo">ICHIRAN RAMEN</div>
+        <div class="nav-links">
+            <div class="left-nav-links">
+                <a href="#" class="menu">MENU</a>
+                <a href="#" class="location">LOCATION</a>
+            </div>
+            <div class="right-nav-links">
+                <a href="#" class="our-story">OUR STORY</a>
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+        <h2 class="content-source">WELCOME!</h2>
+    </div>
+    `;
+    
+    content.appendChild(container);
 }
 
-export default pageLoad
+export default loadPage;
