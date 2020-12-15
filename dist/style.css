@@ -1,0 +1,72 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* global styles */
+html{
+    font-size: 10px;
+}
+body{
+    background-color: #FF5B51;
+    font-family: 'Permanent Marker', cursive;
+    padding: 3rem;
+    padding-bottom: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* content */
+.content{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    height: 100vh;
+    padding: 0 3rem;
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* nav */
+.nav{
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    margin: 0 auto;
+}
+.nav-logo{
+    position: absolute;
+    font-size: 3rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.nav-links{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2rem;
+}
+.left-nav-links a:not(:last-child){
+    margin-right: 2rem;
+}
+
+/* page content */
+.page-content{
+    /* position: absolute; */
+    background-color: #ebebeb;
+    width: 100%;
+    height: 100vh;
+}

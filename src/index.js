@@ -1,1 +1,3 @@
-console.log('yayyy setup complete');
+import pageLoad from './modules/page-load'
+
+pageLoad();
